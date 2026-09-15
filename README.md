@@ -1,8 +1,6 @@
 # Color Rush
 
-<p align="center">
-  <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80" alt="Color Rush game banner" width="900" />
-</p>
+
 
 A fast-paced browser reaction game where colored blocks fall from the top of the screen and the player matches them by pressing the correct keyboard key before they reach the danger line.
 

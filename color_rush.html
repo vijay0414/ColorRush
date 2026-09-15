@@ -11,6 +11,7 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+            -webkit-user-select: none;
             user-select: none;
         }
 
@@ -190,6 +191,7 @@
             align-items: center;
             justify-content: center;
             background: rgba(26, 26, 46, 0.9);
+            -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
             z-index: 10;
             opacity: 0;
@@ -202,22 +204,38 @@
         }
 
         .title {
-            font-size: 5rem;
+            font-size: clamp(4rem, 9vw, 10rem);
+            line-height: 0.9;
             font-weight: 900;
             color: #fff;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             text-align: center;
-            letter-spacing: 4px;
-            background: linear-gradient(45deg, #ff4757, #ffa502, #2ed573, #3742fa);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, #ff4d6d 0%, #ff9f1c 20%, #2ed573 50%, #3a86ff 100%);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
+            filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.15));
+        }
+
+        .title-image {
+            width: min(74vw, 900px);
+            max-width: 100%;
+            height: auto;
+            border-radius: 30px;
+            object-fit: cover;
+            margin-bottom: 18px;
+            border: 3px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
         }
 
         .subtitle {
-            font-size: 1.5rem;
+            font-size: clamp(1.2rem, 2vw, 2rem);
             color: #fff;
-            opacity: 0.8;
+            opacity: 0.9;
+            font-weight: 700;
+            letter-spacing: 0.04em;
             animation: pulse 1.5s infinite alternate;
         }
 
@@ -340,6 +358,11 @@
 
     <!-- Start Screen -->
     <div id="screen-start" class="screen visible">
+        <img
+            class="title-image"
+            src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1600&q=80"
+            alt="Arcade game background"
+        >
         <div class="title">COLOR RUSH</div>
         <div class="subtitle">Press any key to begin</div>
     </div>
